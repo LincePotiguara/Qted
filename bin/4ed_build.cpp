@@ -113,9 +113,11 @@ char *arch_names[] = {
 #define SITE_DIR "../site"
 
 #define FOREIGN "../4coder-non-source/foreign"
-#define FOREIGN_WIN "..\\4coder-non-source\\foreign"
+// This need to be tested on other OS
+#define FOREIGN_WIN "..\\..\\4coder-non-source\\foreign"
+#define NON_SOURCE "..\\..\\4coder-non-source"
 
-char *includes[] = { "custom", FOREIGN "/freetype2", 0, };
+char *includes[] = { "custom", FOREIGN_WIN "/freetype2", 0, };
 
 //
 // Platform layer file tables
@@ -189,7 +191,7 @@ get_defines_from_flags(Arena *arena, u32 flags){
 #define CL_LIBS_X64 CL_LIBS_COMMON FOREIGN_WIN "\\x64\\freetype.lib"
 #define CL_LIBS_X86 CL_LIBS_COMMON FOREIGN_WIN "\\x86\\freetype.lib"
 
-#define CL_ICON "..\\4coder-non-source\\res\\icon.res"
+#define CL_ICON NON_SOURCE "\\res\\icon.res"
 
 internal void
 build(Arena *arena, u32 flags, u32 arch, char *code_path, char **code_files, char *out_path, char *out_file, char **defines, char **exports, char **inc_folders){
