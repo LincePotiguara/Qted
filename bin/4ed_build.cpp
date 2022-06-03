@@ -117,7 +117,7 @@ char *arch_names[] = {
 #define FOREIGN_WIN "..\\..\\4coder-non-source\\foreign"
 #define NON_SOURCE "..\\..\\4coder-non-source"
 
-char *includes[] = { "custom", FOREIGN_WIN "/freetype2", 0, };
+char *includes[] = { "custom", FOREIGN_WIN "\\freetype2", 0, };
 
 //
 // Platform layer file tables
